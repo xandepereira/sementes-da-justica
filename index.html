@@ -254,32 +254,38 @@
 
   <!-- FILL-IN BLANKS -->
   <dialog id="fill">
-    <div class="modal">
-      <header>
-        <h2>Frase com Lacunas</h2>
-        <button class="close" onclick="fill.close()">Fechar</button>
-      </header>
-      <div class="content">
-        <div class="fillwrap">
-          <div class="sentence" id="sentence">
-            <span class="help">Complete a frase clicando nas palavras:</span><br/>
-            <strong>
-              Na nossa escola, o <span class="blank" data-ans="RESPEITO|DIÁLOGO">_____</span> e o
-              <span class="blank" data-ans="DIÁLOGO|RESPEITO">_____</span> vêm antes da
-              <span class="blank" data-ans="PAZ">_____</span>; com a
-              <span class="blank" data-ans="AJUDA">_____</span> de todos construímos um ambiente melhor.
-            </strong>
-          </div>
-          <div class="choices" id="choices"></div>
-          <div style="display:flex;gap:10px;align-items:center">
-            <button class="btn" onclick="checkFill()">Conferir</button>
-            <button class="btn" onclick="resetFill()">Reiniciar</button>
-            <div id="fillMsg" class="subtitle"></div>
-          </div>
+  <div class="modal">
+    <header>
+      <h2>Frase com Lacunas</h2>
+      <button class="close" onclick="fill.close()">Fechar</button>
+    </header>
+    <div class="content">
+      <div class="fillwrap">
+        <div class="sentence" id="sentence">
+          <span class="help">Complete a frase clicando nas palavras:</span><br/>
+          <strong>
+            Na nossa escola, o
+            <span class="blank" data-ans="RESPEITO">_____</span>
+            abre caminho para o
+            <span class="blank" data-ans="DIÁLOGO">_____</span>;
+            com a
+            <span class="blank" data-ans="AJUDA">_____</span>
+            de todos, floresce a
+            <span class="blank" data-ans="PAZ">_____</span>
+            que transforma o nosso
+            <span class="blank" data-ans="AMBIENTE">_____</span>.
+          </strong>
+        </div>
+        <div class="choices" id="choices"></div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button class="btn" onclick="checkFill()">Conferir</button>
+          <button class="btn" onclick="resetFill()">Reiniciar</button>
+          <div id="fillMsg" class="subtitle"></div>
         </div>
       </div>
     </div>
-  </dialog>
+  </div>
+</dialog>
 
 <script>
   const shuffle = arr => arr.map(v=>[Math.random(),v]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
