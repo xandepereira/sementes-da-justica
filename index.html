@@ -488,7 +488,7 @@
   (function(){ const dlg=document.getElementById('memory'); const show=dlg.showModal.bind(dlg); dlg.showModal=function(){ show(); renderMemory(); }})();
 
   // FILL-IN BLANKS (supports multiple answers via |)
-  const CHOICES = ["RESPEITO","DIÁLOGO","AJUDA","PAZ","ALEGRIA","AMIZADE"];
+  const CHOICES = ["RESPEITO","DIÁLOGO","AJUDA","PAZ","ALEGRIA","AMIZADE", "AMBIENTE"];
   function renderFill(){
     const choices = document.getElementById('choices'); choices.innerHTML='';
     const opts = shuffle([...CHOICES]);
